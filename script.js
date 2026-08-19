@@ -1,199 +1,152 @@
-// Contact Form Handler
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('.contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', handleFormSubmit);
+/* ============================================================
+   SCRIPT.JS — Contact form + Hero typed text
+   ============================================================ */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  /* ── Typed text effect (hero page) ── */
+  const typedTarget = document.getElementById('typed-text');
+  if (typedTarget) {
+    const phrases = [
+      'Full-Stack Developer',
+      'Information Systems Student',
+      'Web Developer',
+      'Problem Solver',
+    ];
+    let phraseIdx = 0;
+    let charIdx   = 0;
+    let deleting  = false;
+    let paused    = false;
+
+    function type() {
+      if (paused) return;
+      const current = phrases[phraseIdx];
+
+      if (!deleting) {
+        typedTarget.textContent = current.slice(0, charIdx + 1);
+        charIdx++;
+        if (charIdx === current.length) {
+          paused = true;
+          setTimeout(function () { paused = false; deleting = true; setTimeout(type, 60); }, 1800);
+          return;
+        }
+        setTimeout(type, 70);
+      } else {
+        typedTarget.textContent = current.slice(0, charIdx - 1);
+        charIdx--;
+        if (charIdx === 0) {
+          deleting  = false;
+          phraseIdx = (phraseIdx + 1) % phrases.length;
+          setTimeout(type, 400);
+          return;
+        }
+        setTimeout(type, 40);
+      }
     }
+    setTimeout(type, 800);
+  }
+
+  /* ── Contact form ── */
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', handleFormSubmit);
+  }
 });
 
+/* ── Form handler ── */
 async function handleFormSubmit(e) {
-    e.preventDefault();
-    
-    const form = e.target;
-    const submitBtn = form.querySelector('.submit-btn');
-    const originalBtnText = submitBtn.innerHTML;
-    
-    // Get form data
-    const formData = {
-        name: document.getElementById('name').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        subject: document.getElementById('subject').value.trim(),
-        message: document.getElementById('message').value.trim()
-    };
-    
-    // Validate form data
-    const validationError = validateForm(formData);
-    if (validationError) {
-        showNotification(validationError, 'error');
-        return;
-    }
-    
-    // Show loading state
-    setLoadingState(submitBtn, true);
-    
-    try {
-        // Send using FormSubmit.co (free service)
-        await sendViaFormSubmit(formData);
-        
-        // Show success message
-        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-        
-        // Reset form
-        form.reset();
-        
-    } catch (error) {
-        console.error('Error:', error);
-        showNotification('Failed to send message. Please try again or contact me directly.', 'error');
-    } finally {
-        // Reset button state
-        setLoadingState(submitBtn, false, originalBtnText);
-    }
+  e.preventDefault();
+  const form      = e.target;
+  const submitBtn = form.querySelector('.submit-btn');
+  const origHTML  = submitBtn.innerHTML;
+
+  const data = {
+    name:    document.getElementById('name')?.value.trim()    || '',
+    email:   document.getElementById('email')?.value.trim()   || '',
+    subject: document.getElementById('subject')?.value.trim() || '',
+    message: document.getElementById('message')?.value.trim() || '',
+  };
+
+  const err = validateForm(data);
+  if (err) { showNotification(err, 'error'); return; }
+
+  setLoadingState(submitBtn, true);
+
+  try {
+    await sendViaFormSubmit(data);
+    showNotification("Message sent! I'll get back to you soon.", 'success');
+    form.reset();
+  } catch (error) {
+    console.error(error);
+    showNotification('Failed to send. Please email me directly.', 'error');
+  } finally {
+    setLoadingState(submitBtn, false, origHTML);
+  }
 }
 
-function validateForm(data) {
-    if (data.name.length < 2) {
-        return 'Please enter your full name';
-    }
-    
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(data.email)) {
-        return 'Please enter a valid email address';
-    }
-    
-    if (data.subject.length < 3) {
-        return 'Please enter a subject (minimum 3 characters)';
-    }
-    
-    if (data.message.length < 10) {
-        return 'Please enter a message (minimum 10 characters)';
-    }
-    
-    return null;
+function validateForm(d) {
+  if (d.name.length < 2)            return 'Please enter your full name.';
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) return 'Please enter a valid email address.';
+  if (d.subject.length < 3)         return 'Please enter a subject (min 3 characters).';
+  if (d.message.length < 10)        return 'Please enter a message (min 10 characters).';
+  return null;
 }
 
-function setLoadingState(button, isLoading, originalText = '') {
-    if (isLoading) {
-        button.disabled = true;
-        button.innerHTML = `
-            <i class="fas fa-spinner fa-spin"></i> Sending...
-            <i class="fas fa-arrow-right" style="margin-left: 0.5rem; opacity: 0;"></i>
-        `;
-    } else {
-        button.disabled = false;
-        button.innerHTML = originalText;
-    }
+function setLoadingState(btn, loading, original = '') {
+  if (loading) {
+    btn.disabled   = true;
+    btn.innerHTML  = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+  } else {
+    btn.disabled   = false;
+    btn.innerHTML  = original;
+  }
 }
 
-async function sendViaFormSubmit(formData) {
-    // Create a hidden form for FormSubmit
-    const hiddenForm = document.createElement('form');
-    hiddenForm.style.display = 'none';
-    hiddenForm.method = 'POST';
-    hiddenForm.action = 'https://formsubmit.co/yonatandagnachew5@gmail.com'; // You'll change this in Step 4
-    hiddenForm.target = '_blank';
-    
-    // Add form fields
-    const fields = {
-        'name': formData.name,
-        'email': formData.email,
-        'subject': formData.subject,
-        'message': formData.message,
-        '_subject': `Portfolio Contact: ${formData.subject}`,
-        '_template': 'table',
-        '_captcha': 'false'
-    };
-    
-    for (const [key, value] of Object.entries(fields)) {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = key;
-        input.value = value;
-        hiddenForm.appendChild(input);
-    }
-    
-    // Submit the form
-    document.body.appendChild(hiddenForm);
-    hiddenForm.submit();
-    document.body.removeChild(hiddenForm);
-    
-    // Small delay for better user experience
-    await new Promise(resolve => setTimeout(resolve, 1000));
+async function sendViaFormSubmit(data) {
+  const form = document.createElement('form');
+  form.style.display = 'none';
+  form.method        = 'POST';
+  form.action        = 'https://formsubmit.co/yonatandagnachew5@gmail.com';
+  form.target        = '_blank';
+
+  const fields = {
+    name:     data.name,
+    email:    data.email,
+    subject:  data.subject,
+    message:  data.message,
+    _subject: `Portfolio Contact: ${data.subject}`,
+    _template:'table',
+    _captcha: 'false',
+  };
+
+  for (const [k, v] of Object.entries(fields)) {
+    const inp  = document.createElement('input');
+    inp.type   = 'hidden';
+    inp.name   = k;
+    inp.value  = v;
+    form.appendChild(inp);
+  }
+
+  document.body.appendChild(form);
+  form.submit();
+  document.body.removeChild(form);
+  await new Promise(r => setTimeout(r, 900));
 }
 
-function showNotification(message, type = 'info') {
-    // Remove old notification
-    const oldNotification = document.querySelector('.form-notification');
-    if (oldNotification) oldNotification.remove();
-    
-    // Create new notification
-    const notification = document.createElement('div');
-    notification.className = `form-notification ${type}`;
-    
-    // Style based on type
-    let bgColor, textColor, icon;
-    if (type === 'success') {
-        bgColor = 'rgba(16, 185, 129, 0.1)';
-        textColor = '#10b981';
-        icon = 'fa-check-circle';
-    } else if (type === 'error') {
-        bgColor = 'rgba(239, 68, 68, 0.1)';
-        textColor = '#ef4444';
-        icon = 'fa-exclamation-circle';
-    } else {
-        bgColor = 'rgba(59, 130, 246, 0.1)';
-        textColor = '#3b82f6';
-        icon = 'fa-info-circle';
-    }
-    
-    notification.style.cssText = `
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border-radius: 8px;
-        font-size: 0.95rem;
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        background-color: ${bgColor};
-        color: ${textColor};
-        border: 1px solid ${textColor}20;
-        animation: slideIn 0.3s ease;
-    `;
-    
-    notification.innerHTML = `<i class="fas ${icon}"></i> ${message}`;
-    
-    // Add to form
-    const form = document.querySelector('.contact-form');
-    form.insertBefore(notification, form.firstChild);
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        if (notification.parentElement) {
-            notification.style.animation = 'slideOut 0.3s ease forwards';
-            setTimeout(() => notification.remove(), 300);
-        }
-    }, 5000);
-}
+function showNotification(msg, type) {
+  document.querySelector('.form-notification')?.remove();
 
-// Add animations
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    
-    @keyframes slideOut {
-        from { opacity: 1; transform: translateY(0); }
-        to { opacity: 0; transform: translateY(-10px); }
-    }
-    
-    @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
-    
-    .fa-spinner { animation: spin 1s linear infinite; }
-    .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; }
-`;
-document.head.appendChild(style);
+  const el       = document.createElement('div');
+  el.className   = `form-notification ${type}`;
+  const icon     = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
+  el.innerHTML   = `<i class="fas ${icon}"></i> ${msg}`;
+
+  const form = document.querySelector('.contact-form');
+  form.insertBefore(el, form.firstChild);
+
+  setTimeout(function () {
+    el.style.transition = 'opacity 0.3s';
+    el.style.opacity    = '0';
+    setTimeout(function () { el.remove(); }, 300);
+  }, 5000);
+}

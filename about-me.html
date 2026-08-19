@@ -1,99 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Yonatan Dagnachew</title>
-    <meta name="description" content="Learn about Yonatan Dagnachew Melese — his education, academic journey, and focus areas in Information Systems at Mekelle University.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Yonatan Dagnachew</title>
+  <meta name="description" content="Learn about Yonatan Dagnachew Melese — education, background, and development journey.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <header>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
     <div class="container">
-        <div class="profile-img">
-            <img src="profile/my photo.jpg" alt="Yonatan Dagnachew">
-        </div>
-        <div class="header-info">
-            <h1>Yonatan Dagnachew Melese</h1>
-            <div class="subtitle">
-                <i class="fas fa-graduation-cap" style="margin-right: 8px; color: var(--primary);"></i>
-                4th Year Information Systems | Mekelle University
-            </div>
-            <div class="contact-info">
-                <a href="mailto:yonatandagnachew5@gmail.com">
-                    <i class="fas fa-envelope"></i> yonatandagnachew5@gmail.com
-                </a>
-                <a href="tel:+251991183313">
-                    <i class="fas fa-phone"></i> +251 991 183 313
-                </a>
-                <a href="https://linkedin.com/in/yonatan-dagnachew" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-    </div>
-</header>
-    
-
-    <nav>
+      <div class="nav-inner">
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span><span></span><span></span>
         </button>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about-me.html" class="active">About Me</a>
-            <a href="project-skills.html">Projects & Skills</a>
-            <a href="Gallery/gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
+        <div class="nav-pill">
+          <ul class="nav-links" role="list">
+            <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+            <li><a href="about-me.html" class="active"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="project-skills.html"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="projects.html"><i class="fas fa-folder"></i> Projects</a></li>
+            <li><a href="contact.html"><i class="fas fa-paper-plane"></i> Contact</a></li>
+          </ul>
+
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <main class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about">
-                <p>I am a dedicated 4th year Information Systems student at Mekelle University with a passion for technology and problem-solving. My academic journey has equipped me with a strong foundation in web development, database management, and software engineering principles.</p>
-                
-                <p>I enjoy creating efficient, user-friendly applications and continuously expanding my skill set. My goal is to leverage technology to create solutions that address real-world challenges and make a positive impact.</p>
-                
-                <h3>My Journey</h3>
-                <p>My interest in technology began during my high school years, and it has grown into a passion throughout my university studies. I've developed expertise in various programming languages and tools that enable me to bring ideas to life.</p>
-                
-                <h3>Academic Focus</h3>
-                <p>As an Information Systems student, I focus on the intersection of business and technology, learning how to design, implement, and manage systems that solve organizational challenges.</p>
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <div class="section-label">Get to know me</div>
+      <h1 class="section-title">About Me</h1>
+      <p class="section-subtitle">A passionate developer and student on a mission to build meaningful software.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT SECTION -->
+  <section style="padding: var(--section-py) 0;">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Photo column -->
+        <div class="about-photo-wrap reveal">
+          <div class="about-photo">
+            <img src="profile/my photo.jpg" alt="Yonatan Dagnachew">
+            <div class="about-photo-badge">
+              <div class="name">Yonatan Dagnachew Melese</div>
+              <div class="role">Information Systems @ Mekelle University</div>
+              <div class="about-gpa"><i class="fas fa-star"></i> GPA 3.2 / 4.0</div>
             </div>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <div class="about">
-                <h3>Mekelle University</h3>
-                <p><strong>Bachelor of Science in Information Systems</strong><br>
-                2022 - Present (Expected Graduation: 2026)<br>
-                Current GPA: 3.2/4.0</p>
-                
-                <h3>Relevant Coursework</h3>
-                <ul>
-                    <li>Web Development & Design</li>
-                    <li>Database Management Systems</li>
-                    <li>Software Engineering</li>
-                    <li>System Analysis and Design</li>
-                    <li>Network and Security</li>
-                    <li>Programming Fundamentals</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Yonatan Dagnachew Melese. All Rights Reserved.</p>
-            <p>Information Systems Student | Mekelle University</p>
+          </div>
         </div>
-    </footer>
-    <script src="nav.js"></script>
+
+        <!-- Body column -->
+        <div class="about-body">
+
+          <div class="about-block reveal reveal-delay-1">
+            <h3><i class="fas fa-user-circle"></i> Who I Am</h3>
+            <p>
+              I'm Yonatan Dagnachew Melese — a 4th year Information Systems student at Mekelle University
+              with a strong passion for building web applications and software that solve real-world problems.
+              My academic journey has given me a solid foundation in both the technical and analytical sides
+              of software development.
+            </p>
+          </div>
+
+          <div class="about-block reveal reveal-delay-2">
+            <h3><i class="fas fa-road"></i> My Journey</h3>
+            <p>
+              My curiosity about technology started in high school and grew into a deep interest during my
+              university years. I've taught myself modern web development practices alongside my formal studies,
+              and I've shipped real projects including a full-stack student registration system for a school.
+              Every project has pushed me to write cleaner, more thoughtful code.
+            </p>
+          </div>
+
+          <div class="about-block reveal reveal-delay-3">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="edu-card">
+              <div class="school">Mekelle University</div>
+              <div class="degree">BSc in Information Systems</div>
+              <div class="years">2022 — 2026 (Expected Graduation)</div>
+            </div>
+          </div>
+
+          <div class="about-block reveal reveal-delay-4">
+            <h3><i class="fas fa-book-open"></i> Relevant Coursework</h3>
+            <ul class="about-list">
+              <li><i class="fas fa-chevron-right"></i> Web Development &amp; Design</li>
+              <li><i class="fas fa-chevron-right"></i> Database Management Systems</li>
+              <li><i class="fas fa-chevron-right"></i> Software Engineering</li>
+              <li><i class="fas fa-chevron-right"></i> System Analysis &amp; Design</li>
+              <li><i class="fas fa-chevron-right"></i> Network &amp; Security</li>
+              <li><i class="fas fa-chevron-right"></i> Programming Fundamentals</li>
+            </ul>
+          </div>
+
+          <div class="about-block reveal">
+            <h3><i class="fas fa-bullseye"></i> Career Interests</h3>
+            <ul class="about-list">
+              <li><i class="fas fa-chevron-right"></i> Full-stack web development</li>
+              <li><i class="fas fa-chevron-right"></i> Building useful, accessible software</li>
+              <li><i class="fas fa-chevron-right"></i> Mobile application development</li>
+              <li><i class="fas fa-chevron-right"></i> Database design &amp; architecture</li>
+            </ul>
+          </div>
+
+          <div class="about-block reveal">
+            <h3><i class="fas fa-rocket"></i> Goals</h3>
+            <p>
+              My immediate goal is to graduate with a strong project portfolio and secure a developer role
+              where I can keep growing. Long-term, I want to contribute to products that have a positive
+              impact — ideally in the intersection of education and technology.
+            </p>
+          </div>
+
+          <div class="reveal" style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.5rem;">
+            <a href="projects.html" class="btn btn-primary">
+              <i class="fas fa-folder-open"></i> See My Projects
+            </a>
+            <a href="contact.html" class="btn btn-ghost">
+              <i class="fas fa-paper-plane"></i> Get In Touch
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-text">&copy; 2026 Yonatan Dagnachew Melese. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    <img src="" alt="Lightbox image">
+    <p class="lightbox-caption"></p>
+  </div>
+
+  <script src="nav.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,106 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yonatan Dagnachew - Home</title>
-    <meta name="description" content="Portfolio of Yonatan Dagnachew Melese, 4th Year Information Systems student at Mekelle University. Web development, database management, and software engineering.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yonatan Dagnachew — Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Yonatan Dagnachew Melese — Information Systems student, full-stack developer, and problem solver.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════ -->
+  <nav id="navbar">
     <div class="container">
-        <div class="profile-img">
-            <img src="profile/my photo.jpg" alt="Yonatan Dagnachew">
+      <div class="nav-inner">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-pill">
+          <ul class="nav-links" role="list">
+            <li><a href="index.html" class="active"><i class="fas fa-house"></i> Home</a></li>
+            <li><a href="about-me.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="project-skills.html"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="projects.html"><i class="fas fa-folder"></i> Projects</a></li>
+            <li><a href="contact.html"><i class="fas fa-paper-plane"></i> Contact</a></li>
+          </ul>
+
         </div>
-        <div class="header-info">
-            <h1>Yonatan Dagnachew Melese</h1>
-            <div class="subtitle">
-                <i class="fas fa-graduation-cap" style="margin-right: 8px; color: var(--primary);"></i>
-                4th Year Information Systems | Mekelle University
-            </div>
-            <div class="contact-info">
-                <a href="mailto:yonatandagnachew5@gmail.com">
-                    <i class="fas fa-envelope"></i> yonatandagnachew5@gmail.com
-                </a>
-                <a href="tel:+251991183313">
-                    <i class="fas fa-phone"></i> +251 991 183 313
-                </a>
-                <a href="https://linkedin.com/in/yonatan-dagnachew" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-split">
+
+        <!-- LEFT — name & title -->
+        <div class="hero-left">
+          <h1 class="hero-name">
+            Yonatan<br>
+            <span class="gradient-text">Dagnachew</span>
+          </h1>
+
+          <p class="hero-title">
+            <span id="typed-text">Full-Stack Developer</span><span class="typed-cursor" aria-hidden="true"></span>
+          </p>
+
+          <div class="hero-socials">
+            <a href="https://github.com/JonatanDag" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/yonatan-dagnachew" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:yonatandagnachew5@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
         </div>
-    </div>
-</header>
 
-<!-- MODERN GLASS NAVIGATION -->
-<nav>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="about-me.html">About Me</a>
-        <a href="project-skills.html">Projects & Skills</a>
-        <a href="Gallery/gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</nav>
+        <!-- RIGHT — description, tags, CTAs, stats -->
+        <div class="hero-right">
+          <p class="hero-desc">
+          4th-year Information Systems student at Mekelle University —
+          building full-stack web applications, designing clean interfaces,
+          and turning ideas into working software.
+        </p>
 
+          <div class="hero-tech">
+            <span class="tag"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tag"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tag"><i class="fab fa-php"></i> PHP</span>
+            <span class="tag"><i class="fas fa-database"></i> MySQL</span>
+            <span class="tag"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="tag"><i class="fab fa-react"></i> React</span>
+            <span class="tag"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="tag"><i class="fas fa-server"></i> Express.js</span>
+            <span class="tag"><i class="fas fa-leaf"></i> MongoDB</span>
+            <span class="tag"><i class="fas fa-database"></i> PostgreSQL</span>
+          </div>
 
-
-
-
-
-
-
-
-
-    <main class="container">
-        <section id="welcome">
-            <h2>Welcome to My Portfolio</h2>
-            <div class="about">
-                <p>Hello! I'm Yonatan Dagnachew, a passionate Information Systems student dedicated to creating innovative technology solutions. Welcome to my digital portfolio where I showcase my journey, projects, and skills.</p>
-                <p>Explore my work and get to know more about my academic and professional journey in the world of technology.</p>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-num">3.2<span>/4.0</span></div>
+              <div class="hero-stat-label">Current GPA</div>
             </div>
-        </section>
-
-        <section id="quick-overview">
-            <h2>Quick Overview</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <p>4th Year BSc in Information Systems<br>Mekelle University</p>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Focus Areas</h3>
-                    <p>Web Development<br>Database Management<br>Software Engineering</p>
-                </div>
+            <div>
+              <div class="hero-stat-num">2<span>+</span></div>
+              <div class="hero-stat-label">Projects Built</div>
             </div>
-        </section>
+            <div>
+              <div class="hero-stat-num">3<span>×</span></div>
+              <div class="hero-stat-label">Certificates</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">4th</div>
+              <div class="hero-stat-label">Year Student</div>
+            </div>
+          </div>
+        </div>
 
-        <section id="github">
-    <div class="github-section">
-        <h2>My GitHub Profile</h2>
-        <p>Check out my code repositories and projects on GitHub!</p>
-        
-        <a href="https://github.com/JonatanDag" target="_blank" rel="noopener noreferrer" class="github-btn">
-            <i class="fab fa-github"></i> View My GitHub Profile
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       GITHUB CTA
+  ════════════════════════════════════════════════ -->
+  <section class="github-cta">
+    <div class="container">
+      <div class="github-cta-inner reveal">
+        <div class="section-label" style="justify-content:center; margin-bottom:1rem;">Open Source</div>
+        <h2>Check Out My Code on GitHub</h2>
+        <p>All my projects are open-source. Explore the repositories, star what you like, and let's collaborate.</p>
+        <a href="https://github.com/JonatanDag" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <i class="fab fa-github"></i> View GitHub Profile
         </a>
-        
+      </div>
     </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Yonatan Dagnachew Melese. All Rights Reserved.</p>
-            <p>Information Systems Student | Mekelle University</p>
-        </div>
-    </footer>
-    <script src="nav.js"></script>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-text">&copy; 2026 Yonatan Dagnachew Melese. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    <img src="" alt="Lightbox image">
+    <p class="lightbox-caption"></p>
+  </div>
+
+  <script src="nav.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,130 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects & Skills - Yonatan Dagnachew</title>
-    <meta name="description" content="Projects and technical skills of Yonatan Dagnachew — HTML, CSS, JavaScript, PHP, SQL and more.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills & Certificates — Yonatan Dagnachew</title>
+  <meta name="description" content="Technical skills and certificates of Yonatan Dagnachew — frontend, backend, databases, tools and more.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <header>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
     <div class="container">
-        <div class="profile-img">
-            <img src="profile/my photo.jpg" alt="Yonatan Dagnachew">
-        </div>
-        <div class="header-info">
-            <h1>Yonatan Dagnachew Melese</h1>
-            <div class="subtitle">
-                <i class="fas fa-graduation-cap" style="margin-right: 8px; color: var(--primary);"></i>
-                4th Year Information Systems | Mekelle University
-            </div>
-            <div class="contact-info">
-                <a href="mailto:yonatandagnachew5@gmail.com">
-                    <i class="fas fa-envelope"></i> yonatandagnachew5@gmail.com
-                </a>
-                <a href="tel:+251991183313">
-                    <i class="fas fa-phone"></i> +251 991 183 313
-                </a>
-                <a href="https://linkedin.com/in/yonatan-dagnachew" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-    </div>
-    </header>
-
-    <nav>
+      <div class="nav-inner">
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span><span></span><span></span>
         </button>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about-me.html">About Me</a>
-            <a href="project-skills.html" class="active">Projects & Skills</a>
-            <a href="Gallery/gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
+        <div class="nav-pill">
+          <ul class="nav-links" role="list">
+            <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+            <li><a href="about-me.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="project-skills.html" class="active"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="projects.html"><i class="fas fa-folder"></i> Projects</a></li>
+            <li><a href="contact.html"><i class="fas fa-paper-plane"></i> Contact</a></li>
+          </ul>
+
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <main class="container">
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skills-list">
-                        <div class="skill"><i class="fab fa-html5"></i> HTML</div>
-                        <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
-                        <div class="skill"><i class="fab fa-js-square"></i> JavaScript</div>
-                        <div class="skill"><i class="fab fa-php"></i> PHP</div>
-                        <div class="skill"><i class="fas fa-database"></i> SQL</div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
-                    <div class="skills-list">
-                        <div class="skill"><i class="fas fa-code"></i> VS Code</div>
-                        <div class="skill"><i class="fas fa-jet-fighter"></i> IntelliJ IDEA</div>
-                        <div class="skill"><i class="fas fa-database"></i> MySQL Workbench</div>
-                        <div class="skill"><i class="fas fa-laptop-code"></i> Web Development</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <div class="section-label">What I work with</div>
+      <h1 class="section-title">Skills & Certificates</h1>
+      <p class="section-subtitle">
+        Technologies I work with and certificates I've earned along the way.
+      </p>
+    </div>
+  </div>
 
-        <section id="projects">
-            <h2>Academic Projects</h2>
-            <div class="projects-grid">
-                <div class="project">
-                    <div class="project-img">
-                        <i class="fas fa-tasks fa-3x"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Student registration form</h3>
-                        <p>A web-based application for Bright-mind school registration and manages the registered student.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Html</span>
-                            <span class="tech-tag">Css</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">SQL</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-img">
-                        <i class="fas fa-book fa-3x"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>My digital portfolio</h3>
-                        <p>A website that tells about my academic and professional skill journey in the world of technology.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Html</span>
-                            <span class="tech-tag">Css</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="coming-soon" style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.02); border-radius: 40px;">
-                <h3 style="color: white;">More Projects Coming Soon!</h3>
-                <p style="color: var(--text-dim);">I'm continuously working on new projects and will update my skill with different technical works.</p>
-            </div>
-        </section>
-    </main>
+  <div class="divider"></div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Yonatan Dagnachew Melese. All Rights Reserved.</p>
-            <p>Information Systems Student | Mekelle University</p>
+  <!-- ── SKILLS ── -->
+  <section class="skills-section">
+    <div class="container">
+
+      <div class="skills-category-grid">
+
+        <!-- Frontend -->
+        <div class="skill-cat-card reveal reveal-delay-1">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-palette"></i></div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="skill-tag"><i class="fab fa-react"></i> React</span>
+            <span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+            <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+            <span class="skill-tag"><i class="fas fa-universal-access"></i> Accessibility</span>
+          </div>
         </div>
-    </footer>
-    <script src="nav.js"></script>
+
+        <div class="skill-cat-card reveal reveal-delay-2">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="skill-tag"><i class="fas fa-server"></i> Express.js</span>
+            <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
+            <span class="skill-tag"><i class="fas fa-exchange-alt"></i> REST APIs</span>
+            <span class="skill-tag"><i class="fas fa-lock"></i> Form Validation</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card reveal reveal-delay-3">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
+            <h3>Database</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+            <span class="skill-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+            <span class="skill-tag"><i class="fas fa-leaf"></i> MongoDB</span>
+            <span class="skill-tag"><i class="fas fa-table"></i> SQL</span>
+            <span class="skill-tag"><i class="fas fa-project-diagram"></i> Database Design</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card reveal reveal-delay-4">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-wrench"></i></div>
+            <h3>Tools &amp; Workflow</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+            <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
+            <span class="skill-tag"><i class="fas fa-jet-fighter"></i> IntelliJ IDEA</span>
+            <span class="skill-tag"><i class="fas fa-bug"></i> Debugging</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card reveal reveal-delay-1">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Networking &amp; Security</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-network-wired"></i> Networking Essentials</span>
+            <span class="skill-tag"><i class="fas fa-shield-alt"></i> Cybersecurity Basics</span>
+            <span class="skill-tag"><i class="fas fa-certificate"></i> Cisco Certified</span>
+          </div>
+        </div>
+
+        <div class="skill-cat-card reveal reveal-delay-2">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Mobile</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fab fa-android"></i> Android Fundamentals</span>
+            <span class="skill-tag"><i class="fas fa-certificate"></i> Udacity Certified</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Currently Exploring -->
+      <div class="reveal" style="margin-top:4rem; text-align:center;">
+        <div class="section-label" style="justify-content:center; margin-bottom:1rem;">Always Growing</div>
+        <h2 class="section-title">Currently Exploring</h2>
+        <p class="section-subtitle" style="margin:0.75rem auto 2rem;">
+          Technologies I'm actively learning to expand my stack.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:0.6rem; justify-content:center;">
+          <span class="tag tag-orange"><i class="fab fa-python"></i> Python</span>
+          <span class="tag tag-orange"><i class="fas fa-fire"></i> Django</span>
+          <span class="tag tag-orange"><i class="fab fa-docker"></i> Docker</span>
+          <span class="tag tag-orange"><i class="fas fa-cloud"></i> AWS</span>
+          <span class="tag tag-orange"><i class="fas fa-mobile-alt"></i> React Native</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── CERTIFICATES ── -->
+  <section class="gallery-section">
+    <div class="container">
+
+      <div class="reveal">
+        <div class="section-label">Achievements</div>
+        <h2 class="section-title">Certificates</h2>
+      </div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="cert-icon-wrap"><i class="fas fa-network-wired"></i></div>
+          <div class="cert-body">
+            <h3>Cisco Network Technician</h3>
+            <div class="cert-meta">
+              <span><i class="fas fa-building"></i> Cisco Networking Academy</span>
+              <span><i class="fas fa-calendar"></i> December 28, 2025</span>
+              <span><i class="fas fa-book"></i> Networking Essentials</span>
+            </div>
+            <a href="Gallery/Network_Technician_Career_Path_certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <i class="fas fa-external-link-alt"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="cert-icon-wrap"><i class="fab fa-android"></i></div>
+          <div class="cert-body">
+            <h3>Android Developer Fundamentals</h3>
+            <div class="cert-meta">
+              <span><i class="fas fa-building"></i> Udacity</span>
+              <span><i class="fas fa-calendar"></i> November 19, 2025</span>
+              <span><i class="fas fa-book"></i> Android Developer Fundamentals</span>
+            </div>
+            <a href="Gallery/certificate-of-udacity.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <i class="fas fa-external-link-alt"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-3">
+          <div class="cert-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+          <div class="cert-body">
+            <h3>Introduction to Cybersecurity</h3>
+            <div class="cert-meta">
+              <span><i class="fas fa-building"></i> Cisco Networking Academy</span>
+              <span><i class="fas fa-calendar"></i> November 29, 2025</span>
+              <span><i class="fas fa-book"></i> Introduction to Cybersecurity</span>
+            </div>
+            <a href="Gallery/introduction-to-cybersecurity-certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <i class="fas fa-external-link-alt"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-text">&copy; 2026 Yonatan Dagnachew Melese. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    <img src="" alt="Lightbox image">
+    <p class="lightbox-caption"></p>
+  </div>
+
+  <script src="nav.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

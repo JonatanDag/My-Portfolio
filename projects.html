@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Yonatan Dagnachew</title>
+  <meta name="description" content="Projects built by Yonatan Dagnachew — student registration system, digital portfolio, and more.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-pill">
+          <ul class="nav-links" role="list">
+            <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+            <li><a href="about-me.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="project-skills.html"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="projects.html" class="active"><i class="fas fa-folder"></i> Projects</a></li>
+            <li><a href="contact.html"><i class="fas fa-paper-plane"></i> Contact</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <div class="section-label">What I've built</div>
+      <h1 class="section-title">Projects</h1>
+      <p class="section-subtitle">
+        Real-world applications I've designed and developed from scratch.
+        Each one taught me something new.
+      </p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects-section">
+    <div class="container">
+
+      <!-- ── Featured Project ── -->
+      <div class="section-label reveal" style="margin-bottom:1.5rem;">Featured Project</div>
+
+      <div class="featured-project reveal">
+        <div class="featured-screenshots">
+          <img src="profile/meseret-home.png" alt="Meseret Cosmetics — Home"
+            data-lightbox="profile/meseret-home.png" data-caption="Meseret Cosmetics — Home Page">
+          <img src="profile/meseret-admin.png" alt="Meseret Cosmetics — Admin Dashboard"
+            data-lightbox="profile/meseret-admin.png" data-caption="Meseret Cosmetics — Admin Dashboard">
+          <img src="profile/meseret-login.png" alt="Meseret Cosmetics — Login"
+            data-lightbox="profile/meseret-login.png" data-caption="Meseret Cosmetics — Login Page">
+        </div>
+        <div class="featured-info">
+          <div class="featured-badge"><i class="fas fa-star"></i> Featured Project</div>
+          <h3>Meseret Cosmetics Shop</h3>
+          <p>A production-deployed full-stack e-commerce platform for an online cosmetics store. Complete shopping experience with product catalog, cart, checkout, order tracking, JWT auth, and a full admin panel — live on Vercel and Render.</p>
+          <ul class="featured-features">
+            <li><i class="fas fa-check"></i> Product catalog with categories, search & sorting</li>
+            <li><i class="fas fa-check"></i> Cart, checkout & order tracking (Pending → Delivered)</li>
+            <li><i class="fas fa-check"></i> JWT auth with role-based access (Admin / User)</li>
+            <li><i class="fas fa-check"></i> Admin panel — manage products, orders & users</li>
+            <li><i class="fas fa-check"></i> Fully responsive dark-themed UI</li>
+          </ul>
+          <div class="featured-tags">
+            <span class="tag"><i class="fab fa-react"></i> React 18</span>
+            <span class="tag"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="tag"><i class="fas fa-server"></i> Express.js</span>
+            <span class="tag"><i class="fas fa-leaf"></i> MongoDB</span>
+            <span class="tag"><i class="fas fa-lock"></i> JWT</span>
+          </div>
+          <div class="featured-actions">
+            <a href="https://github.com/JonatanDag/e-commerce-website" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Projects Grid ── -->
+      <div class="pj-grid-header reveal">
+        <div class="section-label">All Work</div>
+        <h2 class="section-title" style="font-size:clamp(1.4rem,2.5vw,1.9rem); margin-bottom:0;">More Projects</h2>
+      </div>
+
+      <div class="pj-grid reveal">
+
+        <!-- BlogSpace -->
+        <div class="pj-card">
+          <div class="pj-card-top">
+            <div class="pj-icon"><i class="fas fa-pen-nib"></i></div>
+            <a href="https://github.com/JonatanDag" target="_blank" rel="noopener noreferrer" class="pj-github" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <h3 class="pj-title">BlogSpace</h3>
+          <p class="pj-desc">Full-stack blogging platform with auth, post management, comments, public profiles, and a paginated searchable feed.</p>
+          <div class="pj-tags">
+            <span class="tag"><i class="fab fa-react"></i> React</span>
+            <span class="tag"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="tag"><i class="fas fa-database"></i> PostgreSQL</span>
+            <span class="tag"><i class="fas fa-lock"></i> JWT</span>
+          </div>
+        </div>
+
+        <!-- ConnectHub -->
+        <div class="pj-card">
+          <div class="pj-card-top">
+            <div class="pj-icon"><i class="fas fa-users"></i></div>
+            <a href="https://github.com/JonatanDag" target="_blank" rel="noopener noreferrer" class="pj-github" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <h3 class="pj-title">ConnectHub</h3>
+          <p class="pj-desc">Android networking app — swipe profiles, mutual-connection chat, location & age filters, photo approval, admin console.</p>
+          <div class="pj-tags">
+            <span class="tag"><i class="fab fa-android"></i> Kotlin</span>
+            <span class="tag"><i class="fas fa-fire"></i> Firebase</span>
+            <span class="tag"><i class="fas fa-map-marker-alt"></i> GPS</span>
+            <span class="tag"><i class="fas fa-comments"></i> Real-time</span>
+          </div>
+        </div>
+
+        <!-- YOYO Digital Menu -->
+        <div class="pj-card">
+          <div class="pj-card-top">
+            <div class="pj-icon"><i class="fas fa-utensils"></i></div>
+            <a href="https://github.com/JonatanDag" target="_blank" rel="noopener noreferrer" class="pj-github" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <h3 class="pj-title">YOYO Burger & Pizza</h3>
+          <p class="pj-desc">Mobile-friendly digital menu — view-only for customers, admin panel for item & category management with PIN auth.</p>
+          <div class="pj-tags">
+            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tag"><i class="fas fa-mobile-alt"></i> Responsive</span>
+            <span class="tag"><i class="fas fa-lock"></i> PIN Auth</span>
+          </div>
+        </div>
+
+        <!-- Student Registration -->
+        <div class="pj-card">
+          <div class="pj-card-top">
+            <div class="pj-icon"><i class="fas fa-graduation-cap"></i></div>
+            <a href="https://github.com/JonatanDag" target="_blank" rel="noopener noreferrer" class="pj-github" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <h3 class="pj-title">Student Registration System</h3>
+          <p class="pj-desc">Full-stack web app for Bright-Mind school — registration forms, validation, student records management, PHP + MySQL backend.</p>
+          <div class="pj-tags">
+            <span class="tag"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tag"><i class="fab fa-php"></i> PHP</span>
+            <span class="tag"><i class="fas fa-database"></i> MySQL</span>
+          </div>
+        </div>
+
+        <!-- Digital Portfolio -->
+        <div class="pj-card">
+          <div class="pj-card-top">
+            <div class="pj-icon"><i class="fas fa-code"></i></div>
+            <a href="https://github.com/JonatanDag" target="_blank" rel="noopener noreferrer" class="pj-github" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <h3 class="pj-title">This Portfolio</h3>
+          <p class="pj-desc">Personal developer portfolio built from scratch — dark theme, scroll animations, responsive layout, custom design system.</p>
+          <div class="pj-tags">
+            <span class="tag"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tag"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+        </div>
+
+        <!-- More coming -->
+        <div class="pj-card pj-card--soon">
+          <i class="fas fa-plus pj-soon-icon"></i>
+          <h3 class="pj-title">More on the way</h3>
+          <p class="pj-desc">Always building. Follow my GitHub to stay updated.</p>
+          <a href="https://github.com/JonatanDag" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" style="margin-top:auto;">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-text">&copy; 2026 Yonatan Dagnachew Melese. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    <img src="" alt="Lightbox image">
+    <p class="lightbox-caption"></p>
+  </div>
+
+  <script src="nav.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
