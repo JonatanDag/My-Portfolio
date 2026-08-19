@@ -1,201 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Yonatan Dagnachew</title>
-    <meta name="description" content="Gallery of Yonatan Dagnachew — project screenshots, certificates from Cisco and Udacity, and academic achievements.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Yonatan Dagnachew</title>
+  <meta name="description" content="Gallery — project screenshots and certificates from Cisco and Udacity.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-        <header>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
     <div class="container">
-        <div class="profile-img">
-            <img src="../profile/my photo.jpg" alt="Yonatan Dagnachew">
-        </div>
-        <div class="header-info">
-            <h1>Yonatan Dagnachew Melese</h1>
-            <div class="subtitle">
-                <i class="fas fa-graduation-cap" style="margin-right: 8px; color: var(--primary);"></i>
-                4th Year Information Systems | Mekelle University
-            </div>
-            <div class="contact-info">
-                <a href="mailto:yonatandagnachew5@gmail.com">
-                    <i class="fas fa-envelope"></i> yonatandagnachew5@gmail.com
-                </a>
-                <a href="tel:+251991183313">
-                    <i class="fas fa-phone"></i> +251 991 183 313
-                </a>
-                <a href="https://linkedin.com/in/yonatan-dagnachew" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-        </div>
-    </div>
-</header>
-
-    <nav>
+      <div class="nav-inner">
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span><span></span><span></span>
         </button>
-        <div class="nav-links">
-            <a href="../index.html">Home</a>
-            <a href="../about-me.html">About Me</a>
-            <a href="../project-skills.html">Projects & Skills</a>
-            <a href="../Gallery/gallery.html" class="active">Gallery</a>
-            <a href="../contact.html">Contact</a>
+        <ul class="nav-links" role="list">
+          <li><a href="../index.html"><i class="fas fa-house"></i> Home</a></li>
+          <li><a href="../about-me.html"><i class="fas fa-user"></i> About</a></li>
+          <li><a href="../project-skills.html"><i class="fas fa-code"></i> Skills</a></li>
+          <li><a href="../projects.html"><i class="fas fa-folder"></i> Projects</a></li>
+          <li><a href="../Gallery/gallery.html" class="active"><i class="fas fa-images"></i> Gallery</a></li>
+          <li><a href="../contact.html"><i class="fas fa-paper-plane"></i> Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="../contact.html" class="btn btn-primary btn-sm">
+            <i class="fas fa-paper-plane"></i> Hire Me
+          </a>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
 
-    <main class="container">
-        <section id="gallery">
-            <h2>My Gallery</h2>
-            <div class="gallery-intro about">
-                <p>Welcome to my gallery! Here you'll find screenshots of my projects, academic work, achievements and other professional activities.</p>
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <div class="section-label">Visual work</div>
+      <h1 class="section-title">Gallery</h1>
+      <p class="section-subtitle">Project screenshots and certificates from my learning journey.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CERTIFICATES -->
+  <section class="gallery-section">
+    <div class="container">
+
+      <div class="reveal">
+        <div class="section-label">Achievements</div>
+        <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2rem);">Certificates</h2>
+      </div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="cert-icon-wrap"><i class="fas fa-network-wired"></i></div>
+          <div class="cert-body">
+            <h3>Cisco Network Technician</h3>
+            <div class="cert-meta">
+              <span><i class="fas fa-building"></i> Cisco Networking Academy</span>
+              <span><i class="fas fa-calendar"></i> December 28, 2025</span>
+              <span><i class="fas fa-book"></i> Networking Essentials</span>
             </div>
-
-            <!-- ===== CERTIFICATES SECTION ===== -->
-            <section id="certificates">
-                <h2>Certificates & Achievements</h2>
-                <div class="certificates-container">
-                    <!-- Certificate 1 -->
-                    <div class="certificate">
-                        <div class="certificate-img">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="certificate-content">
-                            <h3>Cisco Network Technician</h3>
-                            <p><strong>Issued by:</strong> Cisco Networking Academy</p>
-                            <p><strong>Date:</strong> December 28, 2025</p>
-                            <p><strong>Program:</strong> Networking Essentials</p>
-                            <a href="Network_Technician_Career_Path_certificate.pdf" target="_blank" rel="noopener noreferrer" class="view-certificate">
-                                <i class="fas fa-external-link-alt"></i> View Certificate
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Certificate 2 -->
-                    <div class="certificate">
-                        <div class="certificate-img">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>  
-                        <div class="certificate-content">
-                            <h3>Android Developer Fundamentals</h3>
-                            <p><strong>Issued by:</strong> Udacity</p>
-                            <p><strong>Date:</strong> November 19, 2025</p>
-                            <p><strong>Program:</strong> Android Developer Fundamentals</p>
-                            <a href="certificate-of-udacity.pdf" target="_blank" rel="noopener noreferrer" class="view-certificate">
-                                <i class="fas fa-external-link-alt"></i> View Certificate
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Certificate 3 -->
-                    <div class="certificate">
-                        <div class="certificate-img">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="certificate-content">
-                            <h3>Introduction to Cybersecurity</h3>
-                            <p><strong>Issued by:</strong> Cisco Networking Academy</p>
-                            <p><strong>Date:</strong> November 29, 2025</p>
-                            <p><strong>Program:</strong> Introduction to Cybersecurity</p>
-                            <a href="introduction-to-cybersecurity-certificate.pdf" target="_blank" rel="noopener noreferrer" class="view-certificate">
-                                <i class="fas fa-external-link-alt"></i> View Certificate
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ===== PROJECT GALLERY SECTION ===== -->
-            <h2 style="margin-top: 3rem;">Project Screenshots</h2>
-            
-            <!-- Student Registration Form Project -->
-            <div class="project" style="margin-bottom: 3rem;">
-                <div class="project-img">
-    <div class="image-row">
-         <a href="../profile/stud reg 4.png" target="_blank" rel="noopener noreferrer">
-            <img src="../profile/stud reg 4.png" alt="Student Registration Screenshot 1">
-        </a>
-        
-         <a href="../profile/stud reg 3.png" target="_blank" rel="noopener noreferrer">
-            <img src="../profile/stud reg 3.png" alt="Student Registration Screenshot 5" style="width: 100%;">
-        </a>
-     
-    </div>
-    <div class="image-row">
-        <a href="../profile/stud reg 1.png" target="_blank" rel="noopener noreferrer">
-            <img src="../profile/stud reg 1.png" alt="Student Registration Screenshot 3">
-        </a>
-        <a href="../profile/stud reg 5.png" target="_blank" rel="noopener noreferrer">
-            <img src="../profile/stud reg 5.png" alt="Student Registration Screenshot 4">
-        </a>
-    </div>
-    
-</div>
-                <div class="project-content"> 
-                    <h3>Student Registration Form</h3>
-                    <p>Complete student registration system with form validation and database integration. This project was developed for Bright-mind school to manage student registrations efficiently.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">SQL</span>
-                    </div>
-                </div>
-            </div> 
-
-            <!-- Digital Portfolio Project -->
-            <div class="project" style="margin-bottom: 3rem;">
-                <div class="project-img">
-    <div class="image-row">
-        <a href="../profile/img po3.png" target="_blank" rel="noopener noreferrer">
-            <img src="../profile/img po3.png" alt="Portfolio Screenshot 1">
-        </a>
-        <a href="../profile/img po1.png" target="_blank" rel="noopener noreferrer">
-            <img src="../profile/img po1.png" alt="Portfolio Screenshot 3">
-        </a>
-    </div>
-    <div class="image-row">
-        <a href="../profile/img po2.png" target="_blank" rel="noopener noreferrer">
-            <img src="../profile/img po2.png" alt="Portfolio Screenshot 2">
-        </a>
-        <a href="../profile/img po4.png" target="_blank" rel="noopener noreferrer">
-            <img src="../profile/img po4.png" alt="Portfolio Screenshot 4">
-        </a>
-    </div>
-</div>
-                <div class="project-content">
-                    <h3>My Digital Portfolio</h3>
-                    <p>Personal portfolio website showcasing my work with responsive design and interactive features. This site represents my academic and professional journey in technology.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Coming Soon Section -->
-            <div class="coming-soon" style="text-align: center; margin-top: 2rem; margin-bottom: 2rem; padding: 3rem; background: linear-gradient(145deg, #1a2234, #0f172a); border-radius: 40px; border: 1px solid rgba(56,189,248,0.2);">
-                <i class="fas fa-images" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                <h3 style="color: white; font-size: 1.8rem; margin-bottom: 0.5rem;">More Content Coming Soon!</h3>
-                <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto;">I'm continuously working on new projects and will update this gallery with more screenshots, certificates, and demonstrations.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Yonatan Dagnachew Melese. All Rights Reserved.</p>
-            <p>Information Systems Student | Mekelle University</p>
+            <a href="Network_Technician_Career_Path_certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <i class="fas fa-external-link-alt"></i> View Certificate
+            </a>
+          </div>
         </div>
-    </footer>
-    <script src="../nav.js"></script>
+
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="cert-icon-wrap"><i class="fab fa-android"></i></div>
+          <div class="cert-body">
+            <h3>Android Developer Fundamentals</h3>
+            <div class="cert-meta">
+              <span><i class="fas fa-building"></i> Udacity</span>
+              <span><i class="fas fa-calendar"></i> November 19, 2025</span>
+              <span><i class="fas fa-book"></i> Android Developer Fundamentals</span>
+            </div>
+            <a href="certificate-of-udacity.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <i class="fas fa-external-link-alt"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-3">
+          <div class="cert-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+          <div class="cert-body">
+            <h3>Introduction to Cybersecurity</h3>
+            <div class="cert-meta">
+              <span><i class="fas fa-building"></i> Cisco Networking Academy</span>
+              <span><i class="fas fa-calendar"></i> November 29, 2025</span>
+              <span><i class="fas fa-book"></i> Introduction to Cybersecurity</span>
+            </div>
+            <a href="introduction-to-cybersecurity-certificate.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <i class="fas fa-external-link-alt"></i> View Certificate
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROJECT SCREENSHOTS -->
+  <section class="gallery-section" style="padding-top:4rem;">
+    <div class="container">
+
+      <!-- Student Registration -->
+      <div class="reveal" style="margin-bottom:2rem;">
+        <div class="section-label">Project 1</div>
+        <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2rem);">Student Registration System</h2>
+        <p class="section-subtitle">Full-stack web app built for Bright-Mind school.</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <img
+            src="../profile/stud reg 4.png"
+            alt="Student Registration — view 1"
+            data-lightbox="../profile/stud reg 4.png"
+            data-caption="Student Registration — Dashboard">
+          <div class="gallery-item-overlay"><span>Dashboard</span></div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="../profile/stud reg 3.png"
+            alt="Student Registration — view 2"
+            data-lightbox="../profile/stud reg 3.png"
+            data-caption="Student Registration — Form View">
+          <div class="gallery-item-overlay"><span>Form View</span></div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="../profile/stud reg 1.png"
+            alt="Student Registration — view 3"
+            data-lightbox="../profile/stud reg 1.png"
+            data-caption="Student Registration — Student List">
+          <div class="gallery-item-overlay"><span>Student List</span></div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="../profile/stud reg 5.png"
+            alt="Student Registration — view 4"
+            data-lightbox="../profile/stud reg 5.png"
+            data-caption="Student Registration — Detail View">
+          <div class="gallery-item-overlay"><span>Detail View</span></div>
+        </div>
+      </div>
+
+      <!-- Digital Portfolio -->
+      <div class="reveal" style="margin:4rem 0 2rem;">
+        <div class="section-label">Project 2</div>
+        <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2rem);">Digital Portfolio</h2>
+        <p class="section-subtitle">This personal portfolio website.</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <img
+            src="../profile/img po3.png"
+            alt="Portfolio screenshot 1"
+            data-lightbox="../profile/img po3.png"
+            data-caption="Portfolio — Home Page">
+          <div class="gallery-item-overlay"><span>Home Page</span></div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="../profile/img po1.png"
+            alt="Portfolio screenshot 2"
+            data-lightbox="../profile/img po1.png"
+            data-caption="Portfolio — About Page">
+          <div class="gallery-item-overlay"><span>About Page</span></div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="../profile/img po2.png"
+            alt="Portfolio screenshot 3"
+            data-lightbox="../profile/img po2.png"
+            data-caption="Portfolio — Projects Page">
+          <div class="gallery-item-overlay"><span>Projects Page</span></div>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="../profile/img po4.png"
+            alt="Portfolio screenshot 4"
+            data-lightbox="../profile/img po4.png"
+            data-caption="Portfolio — Contact Page">
+          <div class="gallery-item-overlay"><span>Contact Page</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-text">&copy; 2026 Yonatan Dagnachew Melese. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="../about-me.html">About</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    <img src="" alt="Lightbox image">
+    <p class="lightbox-caption"></p>
+  </div>
+
+  <script src="../nav.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

@@ -1,37 +1,51 @@
 # Yonatan Dagnachew — Personal Portfolio
 
-A personal portfolio website built with vanilla HTML, CSS, and JavaScript. It showcases my academic background, technical skills, projects, certificates, and contact information.
+A premium personal developer portfolio built with vanilla HTML, CSS, and JavaScript.
+Dark theme, minimal, modern design system with scroll animations and responsive layout.
 
 ## Pages
 
-| Page | Description |
-|------|-------------|
-| `index.html` | Home — welcome section and GitHub profile link |
-| `about-me.html` | Education, coursework, and personal background |
-| `project-skills.html` | Technical skills and academic projects |
-| `Gallery/gallery.html` | Project screenshots and certificates |
-| `contact.html` | Social links and contact cards |
+| Page | File | Description |
+|------|------|-------------|
+| Home | `index.html` | Hero section, tech stack, stats, GitHub CTA |
+| About | `about-me.html` | Bio, education, coursework, career goals |
+| Skills | `project-skills.html` | Skills organized by category with hover effects |
+| Projects | `projects.html` | Featured project, projects grid, experience timeline |
+| Gallery | `Gallery/gallery.html` | Project screenshots and certificates |
+| Contact | `contact.html` | Social links + contact form |
 
 ## Tech Stack
 
-- **HTML5** — semantic markup
-- **CSS3** — custom properties, CSS Grid, Flexbox, glassmorphism design
-- **JavaScript (Vanilla)** — hamburger nav, contact form handling, FormSubmit.co integration
+- **HTML5** — semantic markup, accessibility attributes
+- **CSS3** — custom design system, CSS Grid, Flexbox, CSS variables, glassmorphism
+- **JavaScript (Vanilla)** — typed text effect, scroll reveal, navbar transitions, contact form
 - **Font Awesome 6** — icons
-- **Google Fonts** — Inter typeface
+- **Google Fonts** — Inter + JetBrains Mono
 
 ## Features
 
-- Responsive design with a mobile hamburger menu
-- Dark theme with glassmorphism cards and gradient accents
-- Octagon-shaped profile image with hover animation
-- Contact form with validation and email delivery via FormSubmit.co
-- Gallery with project screenshots and viewable PDF certificates
-- Sticky pill-style navigation bar
+- Animated hero with floating gradient orbs and grid background
+- Typed text effect cycling through developer titles
+- Sticky navbar with scroll-based style transition
+- Scroll reveal animations via IntersectionObserver
+- Featured project showcase with real screenshots
+- Experience timeline
+- Modern contact form with FormSubmit.co integration
+- Lightbox for gallery images
+- Fully responsive — 1440px down to 375px
+- No external animation libraries
+
+## Design System
+
+- Background: `#060810`
+- Primary accent: `#3b82f6` (blue)
+- Gradient text: blue → cyan → purple
+- Typography: Inter (body) + JetBrains Mono (labels, code)
+- Cards with `1px` subtle borders and glow on hover
 
 ## Projects Showcased
 
-- **Student Registration Form** — web app for Bright-mind school built with HTML, CSS, JS, PHP, and MySQL
+- **Student Registration System** — full-stack (HTML, CSS, JS, PHP, MySQL) for Bright-Mind school
 - **Digital Portfolio** — this site itself
 
 ## Certificates
